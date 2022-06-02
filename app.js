@@ -3,9 +3,7 @@ const path = require("path");
 
 const app = express();
 
-app.listen(process.env.PORT || 3000, function(){
- console.log("Servidor activo")
-});
+const port = process.env.PORT || 3000;
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
