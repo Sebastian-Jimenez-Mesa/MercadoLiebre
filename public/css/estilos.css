@@ -1,0 +1,343 @@
+*{
+    font-family: roboto;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #d9d9d9;
+}
+
+.cabecera{
+    background-color: #EAC926;
+    padding: 10px;
+}
+
+/* ----- ESTILOS HEADER PRINCIPAL ---------- */
+
+.header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cabecera img{
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cabecera input{
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cabecera button{
+    width: 10%;
+}
+
+.botonform{
+    background-color: #03264C;
+    width: 50px;
+    height: 25px;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+    transition: all 200ms;
+}
+
+.botonform:hover {
+    background-color: #0022AA;
+}
+
+.cabecera p{
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* ------------- Menu de hamburguesa ---------- */
+
+.burger-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.fa-bars{
+    border-radius: 5px;
+    background-color:#1259c3;
+    padding: 10px;
+    color: #fff;
+}
+
+/* --------- SECCIÓN MAIN --------------- */
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.fa-truck { 
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position:relative;
+    bottom: 30px;
+    left: 90%;
+}
+
+.articulo{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.articulo:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.fa-truck {
+    transition: all 0.25s ease-out;
+}
+.descripcionArt:hover > .fa-truck{
+    transform: rotate(-90deg);
+}
+
+.descripcionArt{
+    border-top: solid 2px #ebebeb;
+    padding: 15px;
+}
+
+.preciodescuento{
+    display: flex;
+    text-align: left;
+}
+
+.precio{
+    width: 30%;
+}
+
+.descuento{
+    width: 70%;   
+}
+
+.descripcion{
+    padding-top: 25px;
+    color: #666;
+}
+
+.descripcion{
+    display: none;
+}
+
+
+.descripcionArt:hover > .descripcion{
+    display: block;
+}
+
+
+
+/* ------------- TIPOGRAFIA --------------- */
+
+h3{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+section{
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento, .descripcion{
+    font-size: 16px;
+}
+
+.descuento{
+    color: #39b54a;
+}
+
+/* ------- Pie de pagina ---------- */
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+.fa-credit-card{
+    margin-bottom: 10px;
+    color:  #1259c3;
+}
+
+.fa-gift{
+    margin-bottom: 10px;
+    color:  #1259c3;
+}
+
+.fa-user-shield{
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+.info{
+    margin-top: 25px;
+}
+
+.info p b{
+    color:  #666;
+}
+
+.info p{
+   margin-top: 5px; 
+}
+
+.copy{
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* ------------- Media Query Móvil ------------- */
+
+@media  (min-width: 0px) and (max-width: 500px) {
+    
+    .menuGeneral{
+        display: none;
+    }
+
+    .articulo{
+        transition:  all 0.5s;
+    }
+}
+
+/* ------------- Media Query escritorio ------------- */
+
+@media (min-width: 501px){
+    
+    .menuGeneral{
+        display: none;
+    }
+
+    .main{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main h3{
+        width: 94%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
+    .articulo{
+        width: 45%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
+
+/* ------------- Media Query escritorio ------------- */
+
+@media (min-width: 900px){
+
+    .cabecera img{
+        width: 20%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .header1 input{
+        width: 40%;
+    }
+
+    .header1 button{
+        width: 3%;
+    }
+
+    .cabecera p{
+        width:30%;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .menuGeneral{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .menu li i{
+        margin-left: 7px;
+    }
+
+    .main{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main h3{
+        width: 94%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
+    .articulo{
+        width: 22%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
+
+
